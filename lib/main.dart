@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'constraints.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -73,8 +74,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+           Expanded(child: Row(
+             children: <Widget>[
+               Expanded(child: ReusableCard()),
+               Expanded(child: ReusableCard(),),
+               Expanded(child: ReusableCard()),
+
+             ],
+           ),),
+           Expanded(child: ReusableCard(),),
+           Expanded(child: ReusableCard()),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ReusableCard extends StatelessWidget {
+  const ReusableCard({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(10.0),
+      decoration: BoxDecoration(
+        color: Color(0xFF5494FB),
+        borderRadius: BorderRadius.circular(15.0),
       ),
     );
   }

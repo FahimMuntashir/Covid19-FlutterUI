@@ -6,12 +6,11 @@ import 'headache.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Covid 19 ',
       theme: ThemeData(
         primaryColor: Color(0xFFCDE3CE),
       ),
@@ -92,36 +91,50 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                       child: ReusableCard(
                         colour: Color(0xFFFFFFFF),
-                        cardChild: Text(
-                          'hey',
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
-                        ),
+                        cardChild: Text('hey')
                       ),
                     ),
                   ),
                   Expanded(
                     child: ReusableCard(
                       colour: Color(0xFFFFFFFF),
+                      cardChild: Container(
+                        child: Text(
+                          'hey',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
                     ),
                   ),
                   Expanded(
                       child: ReusableCard(
                     colour: Color(0xFF30D397),
+                    cardChild: Text('hi',style: titileStyleBlack,)
                   )),
                 ],
+              ),
+            ),
+            Center(
+              child: Text(
+                'Prevention',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 28.0,
+                ),
               ),
             ),
             Expanded(
               child: ReusableCard(
                 colour: Color(0xFF30D397),
+                cardChild: null,
               ),
             ),
             Expanded(
-                child: ReusableCard(
-              colour: Color(0xFF30D397),
-            )),
+              child: ReusableCard(
+                colour: Color(0xFF30D397),
+                cardChild: Text('hey '),
+              ),
+            ),
           ],
         ),
       ),
@@ -145,3 +158,7 @@ class ReusableCard extends StatelessWidget {
     );
   }
 }
+
+
+
+

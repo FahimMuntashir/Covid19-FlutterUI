@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'constraints.dart';
+import 'headache.dart';
 
 void main() => runApp(MyApp());
 
@@ -38,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Container(
               padding: EdgeInsets.all(40),
-              constraints: BoxConstraints.expand(height: 225),
+              constraints: BoxConstraints.expand(height: 200),
               decoration: BoxDecoration(
                   gradient: new LinearGradient(
                       colors: [lightBlueIsh, lightGreen],
@@ -74,16 +75,53 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-           Expanded(child: Row(
-             children: <Widget>[
-               Expanded(child: ReusableCard()),
-               Expanded(child: ReusableCard(),),
-               Expanded(child: ReusableCard()),
-
-             ],
-           ),),
-           Expanded(child: ReusableCard(),),
-           Expanded(child: ReusableCard()),
+            Expanded(
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Headache();
+                            },
+                          ),
+                        );
+                      },
+                      child: ReusableCard(
+                        colour: Color(0xFFFFFFFF),
+                        cardChild: Text(
+                          'hey',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ReusableCard(
+                      colour: Color(0xFFFFFFFF),
+                    ),
+                  ),
+                  Expanded(
+                      child: ReusableCard(
+                    colour: Color(0xFF30D397),
+                  )),
+                ],
+              ),
+            ),
+            Expanded(
+              child: ReusableCard(
+                colour: Color(0xFF30D397),
+              ),
+            ),
+            Expanded(
+                child: ReusableCard(
+              colour: Color(0xFF30D397),
+            )),
           ],
         ),
       ),
@@ -92,16 +130,16 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class ReusableCard extends StatelessWidget {
-  const ReusableCard({
-    Key key,
-  }) : super(key: key);
+  ReusableCard({@required this.cardChild, this.colour});
+  final Widget cardChild;
+  final Color colour;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        color: Color(0xFF5494FB),
+        color: colour,
         borderRadius: BorderRadius.circular(15.0),
       ),
     );

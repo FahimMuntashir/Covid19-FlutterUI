@@ -1,3 +1,4 @@
+import 'package:covid19ui/hand_wash.dart';
 import 'package:flutter/material.dart';
 
 import 'constraints.dart';
@@ -33,140 +34,206 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         color: backgroundColor,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(40),
-              constraints: BoxConstraints.expand(height: 200),
-              decoration: BoxDecoration(
-                  gradient: new LinearGradient(
-                      colors: [lightBlueIsh, lightGreen],
-                      begin: const FractionalOffset(1.0, 1.0),
-                      end: const FractionalOffset(0.2, 0.2),
-                      stops: [0.0, 1.0],
-                      tileMode: TileMode.clamp),
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(30),
-                      bottomRight: Radius.circular(30))),
-              child: Container(
-                padding: EdgeInsets.only(top: 30),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      'Stay Home,\n Stay Safe',
-                      style: titleStyleWhite,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Center(
-              child: Text(
-                'Symptoms',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 28.0,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Row(
-              children: <Widget>[
-                RaisedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return Headache();
-                        },
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.all(40),
+                constraints: BoxConstraints.expand(height: 200),
+                decoration: BoxDecoration(
+                    gradient: new LinearGradient(
+                        colors: [lightBlueIsh, lightGreen],
+                        begin: const FractionalOffset(1.0, 1.0),
+                        end: const FractionalOffset(0.2, 0.2),
+                        stops: [0.0, 1.0],
+                        tileMode: TileMode.clamp),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(30),
+                        bottomRight: Radius.circular(30))),
+                child: Container(
+                  padding: EdgeInsets.only(top: 30),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Stay Home,\n Stay Safe',
+                        style: titleStyleWhite,
                       ),
-                    );
-                  },
-                  child: Text(
-                    'Headache',
-                    style: TextStyle(fontSize: 20.0),
+                    ],
                   ),
                 ),
-                SizedBox(
-                  width: 30.0,
-                ),
-                RaisedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Fever',
-                    style: TextStyle(fontSize: 20.0),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Center(
+                child: Text(
+                  'Symptoms',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 28.0,
                   ),
                 ),
-                SizedBox(
-                  width: 30.0,
-                ),
-                RaisedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Cough',
-                    style: TextStyle(fontSize: 20.0),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Row(
-              children: <Widget>[
-                RaisedButton(
-                  onPressed: (){
-
-                  },
-                  child: Text(
-                    'Tiredness',
-                    style: TextStyle(
-                      fontSize: 20.0,
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: <Widget>[
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Headache();
+                          },
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Headache',
+                      style: TextStyle(fontSize: 20.0),
                     ),
                   ),
-                ),
-                SizedBox(
-                  width: 20.0,
-                ),
-
-                RaisedButton(
-                  onPressed: (){
-
-                  },
-                  child: Text(
-                    'Diarrhea',
-                    style: TextStyle(
-                      fontSize: 20.0,
+                  SizedBox(
+                    width: 30.0,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Fever',
+                      style: TextStyle(fontSize: 20.0),
                     ),
                   ),
-                ),
-                SizedBox(
-                  width: 20.0,
-                ),
-                RaisedButton(
-                  onPressed: (){
-
-                  },
-
-                  child: Text(
-                    'Aches',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                    ),
-
+                  SizedBox(
+                    width: 30.0,
                   ),
-
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Cough',
+                      style: TextStyle(fontSize: 20.0),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: <Widget>[
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Tiredness',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20.0,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Diarrhea',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20.0,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Aches',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Center(
+                child: Text(
+                  'Prevention',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 28.0,
+                  ),
                 ),
-              ],
-            ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              RaisedButton(
+                splashColor: Colors.teal,
+                color: Color(0xFF98B6E2),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HandWash();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  'Wash your hands',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              RaisedButton(
+                splashColor: Colors.teal,
+                color: Colors.white10,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HandWash();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  'Avoid large events and mass gatherings.',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+              ),
+              SizedBox(height: 10.0,),
+              RaisedButton(
+                splashColor: Colors.teal,
+                color: Colors.white10,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HandWash();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  'Avoid touching your eyes, nose and mouth.',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+              ),
+
+
 //            Expanded(
 //              child: Row(
 //                children: <Widget>[
@@ -228,7 +295,8 @@ class _MyHomePageState extends State<MyHomePage> {
 //                cardChild: Text('hey '),
 //              ),
 //            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

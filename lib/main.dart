@@ -74,67 +74,160 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            Expanded(
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return Headache();
-                            },
-                          ),
-                        );
-                      },
-                      child: ReusableCard(
-                        colour: Color(0xFFFFFFFF),
-                        cardChild: Text('hey')
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: ReusableCard(
-                      colour: Color(0xFFFFFFFF),
-                      cardChild: Container(
-                        child: Text(
-                          'hey',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                      child: ReusableCard(
-                    colour: Color(0xFF30D397),
-                    cardChild: Text('hi',style: titileStyleBlack,)
-                  )),
-                ],
-              ),
+            SizedBox(
+              height: 20.0,
             ),
-            Center(
-              child: Text(
-                'Prevention',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 28.0,
+            Row(
+              children: <Widget>[
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Headache();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'Headache',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
                 ),
-              ),
+                SizedBox(
+                  width: 30.0,
+                ),
+                RaisedButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Fever',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                ),
+                SizedBox(
+                  width: 30.0,
+                ),
+                RaisedButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Cough',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                ),
+              ],
             ),
-            Expanded(
-              child: ReusableCard(
-                colour: Color(0xFF30D397),
-                cardChild: null,
-              ),
+            SizedBox(
+              height: 20.0,
             ),
-            Expanded(
-              child: ReusableCard(
-                colour: Color(0xFF30D397),
-                cardChild: Text('hey '),
-              ),
+            Row(
+              children: <Widget>[
+                RaisedButton(
+                  onPressed: (){
+
+                  },
+                  child: Text(
+                    'Tiredness',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 20.0,
+                ),
+
+                RaisedButton(
+                  onPressed: (){
+
+                  },
+                  child: Text(
+                    'Diarrhea',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 20.0,
+                ),
+                RaisedButton(
+                  onPressed: (){
+
+                  },
+
+                  child: Text(
+                    'Aches',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+
+                  ),
+
+                ),
+              ],
             ),
+//            Expanded(
+//              child: Row(
+//                children: <Widget>[
+//                  Expanded(
+//                    child: GestureDetector(
+//                      onTap: () {
+//                        Navigator.push(
+//                          context,
+//                          MaterialPageRoute(
+//                            builder: (context) {
+//                              return Headache();
+//                            },
+//                          ),
+//                        );
+//                      },
+//                      child: ReusableCard(
+//                        colour: Color(0xFFFFFFFF),
+//                        cardChild: Text('hey')
+//                      ),
+//                    ),
+//                  ),
+//                  Expanded(
+//                    child: ReusableCard(
+//                      colour: Color(0xFFFFFFFF),
+//                      cardChild: Container(
+//                        child: Text(
+//                          'hey',
+//                          style: TextStyle(color: Colors.black),
+//                        ),
+//                      ),
+//                    ),
+//                  ),
+//                  Expanded(
+//                      child: ReusableCard(
+//                    colour: Color(0xFF30D397),
+//                    cardChild: Text('hi',style: titileStyleBlack,)
+//                  )),
+//                ],
+//              ),
+//            ),
+//            Center(
+//              child: Text(
+//                'Prevention',
+//                style: TextStyle(
+//                  color: Colors.black,
+//                  fontSize: 28.0,
+//                ),
+//              ),
+//            ),
+//            Expanded(
+//              child: ReusableCard(
+//                colour: Color(0xFF30D397),
+//                cardChild: null,
+//              ),
+//            ),
+//            Expanded(
+//              child: ReusableCard(
+//                colour: Color(0xFF30D397),
+//                cardChild: Text('hey '),
+//              ),
+//            ),
           ],
         ),
       ),
@@ -142,23 +235,20 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class ReusableCard extends StatelessWidget {
-  ReusableCard({@required this.cardChild, this.colour});
-  final Widget cardChild;
-  final Color colour;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(10.0),
-      decoration: BoxDecoration(
-        color: colour,
-        borderRadius: BorderRadius.circular(15.0),
-      ),
-    );
-  }
-}
-
-
-
-
+//class ReusableCard extends StatelessWidget {
+//  ReusableCard({@required this.cardChild, this.colour});
+//  final Widget cardChild;
+//  final Color colour;
+//
+//  @override
+//  Widget build(BuildContext context) {
+//    return Container(
+//      margin: EdgeInsets.all(10.0),
+//      decoration: BoxDecoration(
+//        color: colour,
+//        borderRadius: BorderRadius.circular(15.0),
+//      ),
+//    );
+//  }
+//}
+//

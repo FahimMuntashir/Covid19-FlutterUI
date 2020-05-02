@@ -1,5 +1,7 @@
+import 'package:covid19ui/fever.dart';
 import 'package:covid19ui/hand_wash.dart';
 import 'package:flutter/material.dart';
+import 'cough.dart';
 
 import 'constraints.dart';
 import 'headache.dart';
@@ -71,8 +73,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text(
                   'Symptoms',
                   style: TextStyle(
+//                    backgroundColor: Colors.black,
                     color: Colors.black,
                     fontSize: 28.0,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -82,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 children: <Widget>[
                   RaisedButton(
+                    color: Color(0xFF348A7B),
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -94,27 +99,56 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     child: Text(
                       'Headache',
-                      style: TextStyle(fontSize: 20.0),
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 30.0,
                   ),
                   RaisedButton(
-                    onPressed: () {},
+                    color: Color(0xFF348A7B),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Fever();
+                          },
+                        ),
+                      );
+                    },
                     child: Text(
                       'Fever',
-                      style: TextStyle(fontSize: 20.0),
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 30.0,
                   ),
                   RaisedButton(
-                    onPressed: () {},
+                    color: Color(0xFF348A7B),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Cough();
+                          },
+                        ),
+                      );
+                    },
                     child: Text(
                       'Cough',
-                      style: TextStyle(fontSize: 20.0),
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],
@@ -125,23 +159,24 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 children: <Widget>[
                   RaisedButton(
+                    color: Color(0xFF348A7B),
                     onPressed: () {},
                     child: Text(
                       'Tiredness',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                      ),
+                      style: TextStyle(fontSize: 20.0, color: Colors.white),
                     ),
                   ),
                   SizedBox(
                     width: 20.0,
                   ),
                   RaisedButton(
+                    color: Color(0xFF348A7B),
                     onPressed: () {},
                     child: Text(
                       'Diarrhea',
                       style: TextStyle(
                         fontSize: 20.0,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -149,11 +184,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     width: 20.0,
                   ),
                   RaisedButton(
+                    color: Color(0xFF348A7B),
                     onPressed: () {},
                     child: Text(
                       'Aches',
                       style: TextStyle(
                         fontSize: 20.0,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -168,6 +205,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 28.0,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -213,7 +251,51 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: TextStyle(fontSize: 20.0),
                 ),
               ),
-              SizedBox(height: 10.0,),
+              SizedBox(
+                height: 10.0,
+              ),
+              RaisedButton(
+                splashColor: Colors.teal,
+                color: Colors.white10,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HandWash();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  ' Don’t share personal items',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              RaisedButton(
+                splashColor: Colors.teal,
+                color: Colors.white10,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HandWash();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  ' Clean and disinfect surfaces',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
               RaisedButton(
                 splashColor: Colors.teal,
                 color: Colors.white10,
@@ -232,7 +314,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: TextStyle(fontSize: 20.0),
                 ),
               ),
-
 
 //            Expanded(
 //              child: Row(

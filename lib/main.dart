@@ -214,7 +214,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               RaisedButton(
                 splashColor: Colors.teal,
-                color: Color(0xFF98B6E2),
+                color: Color(0xFF222B45),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -227,7 +227,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text(
                   'Wash your hands',
-                  style: TextStyle(fontSize: 20.0),
+                  style: TextStyle(fontSize: 20.0, color: Colors.white),
                 ),
               ),
               SizedBox(
@@ -235,7 +235,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               RaisedButton(
                 splashColor: Colors.teal,
-                color: Colors.white10,
+                color: Color(0xFF222B45),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -248,7 +248,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text(
                   'Avoid large events and mass gatherings.',
-                  style: TextStyle(fontSize: 20.0),
+                  style: TextStyle(fontSize: 20.0, color: Colors.white),
                 ),
               ),
               SizedBox(
@@ -256,7 +256,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               RaisedButton(
                 splashColor: Colors.teal,
-                color: Colors.white10,
+                color: Color(0xFF222B45),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -269,7 +269,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text(
                   ' Don’t share personal items',
-                  style: TextStyle(fontSize: 20.0),
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                  ),
                 ),
               ),
               SizedBox(
@@ -277,7 +280,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               RaisedButton(
                 splashColor: Colors.teal,
-                color: Colors.white10,
+                color: Color(0xFF222B45),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -290,7 +293,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text(
                   ' Clean and disinfect surfaces',
-                  style: TextStyle(fontSize: 20.0),
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                  ),
                 ),
               ),
               SizedBox(
@@ -298,7 +304,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               RaisedButton(
                 splashColor: Colors.teal,
-                color: Colors.white10,
+                color: Color(0xFF222B45),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -311,7 +317,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text(
                   'Avoid touching your eyes, nose and mouth.',
-                  style: TextStyle(fontSize: 20.0),
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                  ),
                 ),
               ),
 

@@ -1,4 +1,8 @@
-# covid19ui
+# COVID-19 Flutter UI
+
+
+
+<img src="preview.PNG" height="500">
 
 A new Flutter application.
 

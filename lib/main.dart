@@ -316,75 +316,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: Text(
-                  'Avoid touching your eyes, nose and mouth.',
+                  'Avoid touching your eyes, nose and \nmouth.',
                   style: TextStyle(
                     fontSize: 20.0,
                     color: Colors.white,
                   ),
                 ),
               ),
-
-//            Expanded(
-//              child: Row(
-//                children: <Widget>[
-//                  Expanded(
-//                    child: GestureDetector(
-//                      onTap: () {
-//                        Navigator.push(
-//                          context,
-//                          MaterialPageRoute(
-//                            builder: (context) {
-//                              return Headache();
-//                            },
-//                          ),
-//                        );
-//                      },
-//                      child: ReusableCard(
-//                        colour: Color(0xFFFFFFFF),
-//                        cardChild: Text('hey')
-//                      ),
-//                    ),
-//                  ),
-//                  Expanded(
-//                    child: ReusableCard(
-//                      colour: Color(0xFFFFFFFF),
-//                      cardChild: Container(
-//                        child: Text(
-//                          'hey',
-//                          style: TextStyle(color: Colors.black),
-//                        ),
-//                      ),
-//                    ),
-//                  ),
-//                  Expanded(
-//                      child: ReusableCard(
-//                    colour: Color(0xFF30D397),
-//                    cardChild: Text('hi',style: titileStyleBlack,)
-//                  )),
-//                ],
-//              ),
-//            ),
-//            Center(
-//              child: Text(
-//                'Prevention',
-//                style: TextStyle(
-//                  color: Colors.black,
-//                  fontSize: 28.0,
-//                ),
-//              ),
-//            ),
-//            Expanded(
-//              child: ReusableCard(
-//                colour: Color(0xFF30D397),
-//                cardChild: null,
-//              ),
-//            ),
-//            Expanded(
-//              child: ReusableCard(
-//                colour: Color(0xFF30D397),
-//                cardChild: Text('hey '),
-//              ),
-//            ),
             ],
           ),
         ),
@@ -392,21 +330,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-//class ReusableCard extends StatelessWidget {
-//  ReusableCard({@required this.cardChild, this.colour});
-//  final Widget cardChild;
-//  final Color colour;
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    return Container(
-//      margin: EdgeInsets.all(10.0),
-//      decoration: BoxDecoration(
-//        color: colour,
-//        borderRadius: BorderRadius.circular(15.0),
-//      ),
-//    );
-//  }
-//}
-//
